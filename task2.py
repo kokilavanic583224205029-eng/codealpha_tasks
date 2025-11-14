@@ -34,7 +34,7 @@ def load_dataset(path):
     return df
 
 def find_columns(df):
-    # Identify likely date, rate and region columns by common names
+    # Identify likely date, rate and region columns by common names   
     date_cols = [c for c in df.columns if 'date' in c or 'year' in c or 'month' in c]
     rate_cols = [c for c in df.columns if 'unemploy' in c or 'unemployment' in c or 'rate' == c or 'unemployment_rate' in c]
     region_cols = [c for c in df.columns if 'region' in c or 'country' in c or 'state' in c or 'area' in c]
